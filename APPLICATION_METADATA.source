@@ -1,0 +1,11 @@
+# Metadata of the application
+# ===========================
+# This is the configuration file that configures the metadata of the application
+#
+# https://github.com/Lin-Buo-Ren/Flexible-Software-Installation-Specification#application_metadatasource
+META_APPLICATION_NAME="Git Attribute Configurations for Flat-XML ODF Documents / 用於 Flat-XML 風格 ODF 格式文件的 Git 屬性設定"
+META_APPLICATION_DEVELOPER_NAME="林博仁"
+META_APPLICATION_LICENSE="Creative Commons BY-SA 4.0+"
+META_APPLICATION_SITE_URL="https://github.com/libreoffice-tw/Git-Attribute-Configurations-for-Flat-XML-ODF-Documents"
+META_APPLICATION_ISSUE_TRACKER_URL="https://github.com/libreoffice-tw/Git-Attribute-Configurations-for-Flat-XML-ODF-Documents/issues"
+META_APPLICATION_SEEKING_HELP_OPTION="contact developer"

@@ -1,0 +1,6 @@
+# Project-specific Git Configurations
+# https://git-scm.com/docs/git-config
+
+## Filter for Flat-XML ODF Documents
+[filter "clean-odf-flat-xml"]
+	clean = \"Git Clean and Smudge Filters/clean-odf-flat-xml.bash\"

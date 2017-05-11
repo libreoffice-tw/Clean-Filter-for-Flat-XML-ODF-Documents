@@ -1,0 +1,9 @@
+# gitattributes - defining attributes per path
+# https://git-scm.com/docs/gitattributes
+
+## Setup filters for Flat-XML ODF Documents
+## Refer .gitconfig for more information
+*.fodt filter=clean-odf-flat-xml
+*.fodp filter=clean-odf-flat-xml
+*.fodg filter=clean-odf-flat-xml
+*.fods filter=clean-odf-flat-xml

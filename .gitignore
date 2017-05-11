@@ -1,0 +1,20 @@
+# Git 版本控制忽略規則
+# 本檔案基於「Git 版本控制忽略規則範本專案」
+# https://github.com/Vdragon/Git_ignore_rules_template
+
+## 排除常見備份檔副檔名 ##
+*.backup
+*.bak
+*.old
+*.save
+
+# GNU/Linux作業系統下備份檔常包含波浪號(tilde, ~)
+*.*~*
+*~
+
+## 忽略類 Unix 作業系統隱藏檔 ##
+# 類 Unix 作業系統以英式句點開頭檔名的檔案為隱藏檔
+.*
+
+# 不忽略 Git 版本控制系統的檔案，注意 /.git 目錄原本就是被忽略的
+!.git*
