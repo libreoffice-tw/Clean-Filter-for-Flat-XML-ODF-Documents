@@ -4,3 +4,7 @@
 ## Filter for Flat-XML ODF Documents
 [filter "clean-odf-flat-xml"]
 	clean = \"Git Clean and Smudge Filters/clean-odf-flat-xml.bash\"
+
+## Filter for GNU Bash scripts
+[filter "bash"]
+	clean = "\"Git Clean and Smudge Filters/Clean Filter for GNU Bash Scripts/Clean Filter for GNU Bash Script.bash\""
