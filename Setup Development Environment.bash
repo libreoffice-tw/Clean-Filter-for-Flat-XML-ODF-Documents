@@ -688,6 +688,15 @@ init() {
 		&& printf "done\n"\
 		|| printf "failed\n"
 
+	printf "Setting Git Hooks..."
+	ln \
+		--symbolic\
+		--verbose\
+		"${SDC_GIT_HOOKS_DIR}/Pre-commit Script.bash"\
+		"${SHC_PREFIX_DIR}/.git/hooks/pre-commit"\
+		&& printf "done\n"\
+		|| printf "failed\n"
+
 	exit "${COMMON_RESULT_SUCCESS}"
 }; declare -fr init
 init
