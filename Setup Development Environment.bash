@@ -682,7 +682,7 @@ init() {
     git --git-dir="${SHC_PREFIX_DIR}/.git" --work-tree="${SHC_PREFIX_DIR}" config include.path ../.gitconfig
     printf "done.\n"
 
-	printf "Fetching submodules.."
+	printf "Fetching submodules..."
 	git submodule init\
 		&& git submodule update --recursive\
 		&& printf "done\n"\
