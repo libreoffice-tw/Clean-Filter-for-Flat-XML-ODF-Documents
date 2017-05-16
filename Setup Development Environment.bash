@@ -689,10 +689,23 @@ init() {
 		|| printf "failed\n"
 
 	printf "Setting Git Hooks..."
+	if [ ! -v SDC_GIT_HOOKS_DIR ] || [ -z "${SDC_GIT_HOOKS_DIR}" ]; then
+		printf "\n%s: Error: Unable to locate Git Hooks directory\n" "${RUNTIME_EXECUTABLE_NAME}" 1>&2
+		exit 1
+	fi
+	# SOFTWARE_DIRECTORY_CONFIGURATION.source is scope of Flexible Software Installation Specification
+	# shellcheck disable=SC1090
+	if ! source "${SDC_GIT_HOOKS_DIR}"/SOFTWARE_DIRECTORY_CONFIGURATION.source\
+		|| ! meta_util_is_parameter_set_and_not_null SDC_GNU_BASH_PRECOMMIT_HOOK_DIR; then
+		printf "\n%s: Error: Unable to locate Bash Pre-commit hook directory\n" "${RUNTIME_EXECUTABLE_NAME}" 1>&2
+		exit 1
+	fi
 	ln \
 		--symbolic\
 		--verbose\
-		"${SDC_GIT_HOOKS_DIR}/Pre-commit Script.bash"\
+		--relative\
+		--force\
+		"${SDC_GNU_BASH_PRECOMMIT_HOOK_DIR}/Pre-commit Script.bash"\
 		"${SHC_PREFIX_DIR}/.git/hooks/pre-commit"\
 		&& printf "done\n"\
 		|| printf "failed\n"
