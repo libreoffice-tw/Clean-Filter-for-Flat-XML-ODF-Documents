@@ -6,3 +6,6 @@ Clean filter for flat-XML ODF documents for git and other applications
 
 ## 智慧財產授權條款<br>Intellectual Property License
 Creative Commons BY-SA 4.0+
+
+## 軟體依賴關係<br>Software Dependencies
+This software depend on XMLStarlet for manipulating XML documents, `xmlstarlet` executable must be in your environment's executable search path
